@@ -6,5 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     name: GolangCI Lint
     steps:
-      - name: GolangCI-Linter
-        uses: Mushus/golangci-linter@v1.1.1
+      - name: GolangCI-Lint Action
+        uses: actions-contrib/golangci-lint@v0.1.0
+        with:
+          args: run
