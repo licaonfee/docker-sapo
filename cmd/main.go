@@ -33,6 +33,9 @@ func (a *argList) Set(value string) error {
 	if len(vals) != 2 {
 		return fmt.Errorf("value must be in form key=value")
 	}
+	if a.args == nil {
+		a.args = make(map[string]string)
+	}
 	a.args[vals[0]] = vals[1]
 	return nil
 }
